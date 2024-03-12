@@ -32,6 +32,7 @@ require('lazy').setup({
   require("chickie.plugins.lspconfig"),
   require("chickie.plugins.indent_line"),
   require("chickie.plugins.null_ls"),
+  require("chickie.plugins.fugitive"),
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.

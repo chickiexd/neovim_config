@@ -37,18 +37,19 @@ vim.opt.showmode = true
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.opt.clipboard = 'unnamedplus'
-vim.g.clipboard = {
-    name = 'WslClipboard',
-    copy = {
-        ['+'] = 'clip.exe',
-        ['*'] = 'clip.exe',
-    },
-    paste = {
-        ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-        ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    },
-    cache_enabled = 0,
-}
+-- REMOVED: This is for WSL clipboard, because of laaaaaag
+-- vim.g.clipboard = {
+--     name = 'WslClipboard',
+--     copy = {
+--         ['+'] = 'clip.exe',
+--         ['*'] = 'clip.exe',
+--     },
+--     paste = {
+--         ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--         ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+--     },
+--     cache_enabled = 0,
+-- }
 -- Enable break indent
 vim.opt.breakindent = true
 
