@@ -6,6 +6,8 @@ Using [LazyVim](https://www.lazyvim.org)
 - [node.js](https://nodejs.org/en/download)
 - gcc ```sudo apt install build-essential```
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+- for black formatter: ```sudo apt install python3-pip python3-dev python3-setuptools python3.10-venv```
+- prettier ``` npm install -g prettier```
 
 #### Clone to ~/.config/nvim
 ```

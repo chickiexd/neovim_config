@@ -23,14 +23,15 @@ require('lazy').setup({
     end
   },
 
-  -- require("chickie.plugins.telescope"),
-  -- require("chickie.plugins.treesitter"),
-  -- require("chickie.plugins.which-key"),
-  -- require("chickie.plugins.todo-comments"),
-  -- require("chickie.plugins.mini"),
-  -- require("chickie.plugins.cmp"),
-  -- require("chickie.plugins.lspconfig"),
-  -- require("chickie.plugins.indent_line"),
+  require("chickie.plugins.telescope"),
+  require("chickie.plugins.treesitter"),
+  require("chickie.plugins.which-key"),
+  require("chickie.plugins.todo-comments"),
+  require("chickie.plugins.mini"),
+  require("chickie.plugins.cmp"),
+  require("chickie.plugins.lspconfig"),
+  require("chickie.plugins.indent_line"),
+  require("chickie.plugins.null_ls"),
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
@@ -57,7 +58,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  { import = 'chickie.plugins' },
+  -- { import = 'chickie.plugins' },
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
