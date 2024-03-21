@@ -34,6 +34,10 @@ require('lazy').setup({
   require("chickie.plugins.null_ls"),
   require("chickie.plugins.fugitive"),
   require("chickie.plugins.vim-airline"),
+  -- require("chickie.plugins.leetcode"),
+  require("chickie.plugins.euler_vim"),
+  require("chickie.plugins.harpoon"),
+  -- require("chickie.plugins.nvim-tree"),
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
