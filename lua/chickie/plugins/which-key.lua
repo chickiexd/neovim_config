@@ -2,8 +2,8 @@
 --
 -- This is often very useful to both group configuration, as well as handle
 -- lazy loading plugins that don't need to be loaded immediately at startup.
---
--- For example, in the following configuration, we use:
+
+
 --  event = 'VimEnter'
 --
 -- which loads which-key before all the UI elements are loaded. Events can be
