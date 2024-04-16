@@ -64,10 +64,8 @@ vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>j', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>k', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Move focus to the right window' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -94,8 +92,8 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
 -- vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-d>", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<C-f>", function() harpoon:list():next() end)
+vim.keymap.set("n", "<C-f>", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<C-g>", function() harpoon:list():next() end)
 
 -- NEOGIT
 vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Open Neogit" })
@@ -107,4 +105,7 @@ vim.keymap.set("n", "<leader>gB", ":G blame<CR>", { desc = "git blame" })
 
 --NONECKPAIN
 vim.keymap.set("n", "<leader>nn", ":NoNeckPain<CR>", { desc = "noneckpain" })
-
+--UNDOTREE
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+--COMMENT
+vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise()<CR>", { desc = "Comment line" })

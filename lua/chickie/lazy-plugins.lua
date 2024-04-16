@@ -17,6 +17,7 @@ require('lazy').setup({
   {'folke/zen-mode.nvim', opts = {} },
   {'numToStr/Comment.nvim', opts = {} },
 
+
   {'sainnhe/sonokai',
     priority = 1000,
     init = function()
@@ -33,6 +34,7 @@ require('lazy').setup({
   require("chickie.plugins.lspconfig"),
   require("chickie.plugins.indent_line"),
   require("chickie.plugins.null_ls"),
+  require("chickie.plugins.undotree"),
   -- require("chickie.plugins.fugitive"),
   require("chickie.plugins.vim-airline"),
   require("chickie.plugins.no-neck-pain"),
