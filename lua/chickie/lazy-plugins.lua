@@ -18,12 +18,6 @@ require('lazy').setup({
   {'numToStr/Comment.nvim', opts = {} },
 
 
-  {'sainnhe/sonokai',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'sonokai'
-    end
-  },
 
   require("chickie.plugins.telescope"),
   require("chickie.plugins.treesitter"),
@@ -44,6 +38,16 @@ require('lazy').setup({
   require("chickie.plugins.harpoon"),
   require("chickie.plugins.neogit"),
   -- require("chickie.plugins.nvim-tree"),
+  -- COLOR SCHEMES
+  require("chickie.plugins.colorscheme_catppuccin"),
+
+  -- {'sainnhe/sonokai',
+  --   priority = 1000,
+  --   init = function()
+  --     vim.cmd.colorscheme 'sonokai'
+  --   end
+  -- },
+
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
