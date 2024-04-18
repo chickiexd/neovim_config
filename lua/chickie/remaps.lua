@@ -4,6 +4,8 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>Q", "<cmd>q!<CR>")
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 vim.keymap.set("n", "<leader>W", "<cmd>wq<CR>")
+vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
+vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -109,3 +111,10 @@ vim.keymap.set("n", "<leader>nn", ":NoNeckPain<CR>", { desc = "noneckpain" })
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 --COMMENT
 vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise()<CR>", { desc = "Comment line" })
+--TROUBLE
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>xq", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)

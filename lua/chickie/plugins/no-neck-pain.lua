@@ -8,6 +8,17 @@ return {
       },
       mappings = {
       },
+      buffers = {
+        wo = {
+          fillchars = "eob: ",
+        },
+        colors = {
+          -- background = "#2b2d2e",
+          -- blend = -1,
+        },
+      },
     },
-},
+  },
 }
+
+
