@@ -31,13 +31,14 @@ require('lazy').setup({
   require("chickie.plugins.undotree"),
   require("chickie.plugins.trouble"),
   -- require("chickie.plugins.fugitive"),
-  require("chickie.plugins.vim-airline"),
   require("chickie.plugins.no-neck-pain"),
   -- require("chickie.plugins.leetcode"),
   require("chickie.plugins.euler_vim"),
   require("chickie.plugins.harpoon"),
   require("chickie.plugins.neogit"),
   -- require("chickie.plugins.nvim-tree"),
+  -- require("chickie.plugins.vim-airline"),
+  require("chickie.plugins.lualine"),
   -- COLOR SCHEMES
   require("chickie.plugins.colorscheme_catppuccin"),
 
