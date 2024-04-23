@@ -36,6 +36,7 @@ require('lazy').setup({
   require("chickie.plugins.euler_vim"),
   require("chickie.plugins.harpoon"),
   require("chickie.plugins.neogit"),
+  require("chickie.plugins.nvim-ufo"),
   -- require("chickie.plugins.nvim-tree"),
   -- require("chickie.plugins.vim-airline"),
   require("chickie.plugins.lualine"),

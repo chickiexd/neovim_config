@@ -90,3 +90,7 @@ vim.opt.laststatus = 0
 vim.opt.ruler = false
 -- vim.opt.statusbar = 0 -- Always hide statusbar
 -- vim: ts=2 sts=2 sw=2 et
+--
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.cmd([[ set nofoldenable]])
