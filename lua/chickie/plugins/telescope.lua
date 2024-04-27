@@ -60,8 +60,8 @@ return {
         defaults = {
           mappings = {
             -- i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-            i = { ["<C-t>"] = trouble.open_with_trouble },
-            n = { ["<C-t>"] = trouble.open_with_trouble },
+            i = { ["<C-q>"] = trouble.open_with_trouble },
+            n = { ["<C-q>"] = trouble.open_with_trouble },
           },
         },
         -- pickers = {}

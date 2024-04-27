@@ -119,6 +119,7 @@ vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist"
 vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
 --OIL
 vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<leader>.", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 --VIMUX
 vim.keymap.set("n", "<leader>vp", "<CMD>VimuxPromptCommand<CR>", { desc = "VimuxPromptCommand" })
 vim.keymap.set("n", "<leader>vv", "<CMD>VimuxRunCommand('clear; python3 '. bufname('%'))<CR>", { desc = "VimuxPromptCommand" })
