@@ -104,7 +104,6 @@ vim.keymap.set("n", "<leader>gp", ":Neogit pull<CR>", { desc = "pull Neogit" })
 vim.keymap.set("n", "<leader>gP", ":Neogit push<CR>", { desc = "push Neogit" })
 vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { desc = "telescope git branches" })
 vim.keymap.set("n", "<leader>gB", ":G blame<CR>", { desc = "git blame" })
-
 --NONECKPAIN
 vim.keymap.set("n", "<leader>nn", ":NoNeckPain<CR>", { desc = "noneckpain" })
 --UNDOTREE
@@ -123,3 +122,5 @@ vim.keymap.set("n", "<leader>-", "<CMD>Oil<CR>", { desc = "Open parent directory
 --VIMUX
 vim.keymap.set("n", "<leader>vp", "<CMD>VimuxPromptCommand<CR>", { desc = "VimuxPromptCommand" })
 vim.keymap.set("n", "<leader>vv", "<CMD>VimuxRunCommand('clear; python3 '. bufname('%'))<CR>", { desc = "VimuxPromptCommand" })
+--NVIM-TREE
+vim.keymap.set("n", "<leader>pv", "<CMD>NvimTreeToggle<CR>", { desc = "NVIM tree toggle" })

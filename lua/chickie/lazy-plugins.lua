@@ -40,7 +40,7 @@ require('lazy').setup({
   require("chickie.plugins.oil"),
   require("chickie.plugins.vim-tmux-navigator"),
   require("chickie.plugins.vimux"),
-  -- require("chickie.plugins.nvim-tree"),
+  require("chickie.plugins.nvim-tree"),
   -- require("chickie.plugins.vim-airline"),
   require("chickie.plugins.lualine"),
   -- COLOR SCHEMES
