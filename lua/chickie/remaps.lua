@@ -7,6 +7,23 @@ vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
 
+-- Resize
+vim.keymap.set('n', '<M-Left>',  ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Up>',    ':resize +5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Down>',  ':resize -5<CR>', { noremap = true, silent = true })
+
+-- TABS
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
+vim.keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>to", "<cmd>tabonly<CR>", { desc = "Close other tabs" })
+-- Unmap default split navigation
+vim.keymap.set('n', '<C-w>l', '', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>h', '', { noremap = true, silent = true })
+-- Set tab navigation to CTRL+<hjkl>
+vim.keymap.set('n', '<C-w>l', ':tabnext<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-w>h', ':tabprevious<CR>', { noremap = true, silent = true })
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -97,16 +114,6 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
 vim.keymap.set("n", "<C-f>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-g>", function() harpoon:list():next() end)
 
--- TABS
-vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
-vim.keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
-vim.keymap.set("n", "<leader>to", "<cmd>tabonly<CR>", { desc = "Close other tabs" })
--- Unmap default split navigation
-vim.api.nvim_set_keymap('n', '<C-w>l', '', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-w>h', '', { noremap = true, silent = true })
--- Set tab navigation to CTRL+<hjkl>
-vim.api.nvim_set_keymap('n', '<C-w>l', ':tabnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-w>h', ':tabprevious<CR>', { noremap = true, silent = true })
 
 -- NEOGIT
 vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Open Neogit" })
