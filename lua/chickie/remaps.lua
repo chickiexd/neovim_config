@@ -1,9 +1,9 @@
 --  [[ Basic Keymaps ]]
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
-vim.keymap.set("n", "<leader>Q", "<cmd>q!<CR>")
+vim.keymap.set("n", "<leader>Q", "<cmd>qa<CR>")
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
-vim.keymap.set("n", "<leader>W", "<cmd>wq<CR>")
+vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
 
@@ -96,6 +96,17 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<C-f>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-g>", function() harpoon:list():next() end)
+
+-- TABS
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
+vim.keymap.set("n", "<leader>tq", "<cmd>tabclose<CR>", { desc = "Close tab" })
+vim.keymap.set("n", "<leader>to", "<cmd>tabonly<CR>", { desc = "Close other tabs" })
+-- Unmap default split navigation
+vim.api.nvim_set_keymap('n', '<C-w>l', '', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>h', '', { noremap = true, silent = true })
+-- Set tab navigation to CTRL+<hjkl>
+vim.api.nvim_set_keymap('n', '<C-w>l', ':tabnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-w>h', ':tabprevious<CR>', { noremap = true, silent = true })
 
 -- NEOGIT
 vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Open Neogit" })
