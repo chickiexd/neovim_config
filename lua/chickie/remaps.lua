@@ -7,6 +7,10 @@ vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
 
+-- Stay in indent mode
+vim.keymap.set("v", "<", "<gv^")
+vim.keymap.set("v", ">", ">gv^")
+
 -- Resize
 vim.keymap.set('n', '<M-Left>',  ':vertical resize -5<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<M-Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
