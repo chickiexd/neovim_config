@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>Q", "<cmd>qa<CR>")
-vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>wa<CR>")
 vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
@@ -58,7 +58,12 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
+-- second brain stuff
+vim.keymap.set("n", "<leader>sb", ":cd /home/chickie/data/second_brain<cr>")
+vim.keymap.set("n", "<leader>svf", ":Telescope find_files search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
+vim.keymap.set("n", "<leader>svg", ":Telescope live_grep search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
 
+--
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("w")
   vim.cmd("so")
