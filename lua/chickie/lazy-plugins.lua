@@ -34,6 +34,7 @@ require('lazy').setup({
   require("chickie.plugins.no-neck-pain"),
   -- require("chickie.plugins.leetcode"),
   require("chickie.plugins.euler_vim"),
+  require("chickie.plugins.auto_sessions"),
   require("chickie.plugins.harpoon"),
   require("chickie.plugins.neogit"),
   require("chickie.plugins.nvim-ufo"),
