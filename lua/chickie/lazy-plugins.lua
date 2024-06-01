@@ -30,6 +30,8 @@ require('lazy').setup({
   require("chickie.plugins.null_ls"),
   require("chickie.plugins.undotree"),
   require("chickie.plugins.trouble"),
+  require("chickie.plugins.obsidian"),
+  require("chickie.plugins.noice"),
   -- require("chickie.plugins.fugitive"),
   require("chickie.plugins.no-neck-pain"),
   -- require("chickie.plugins.leetcode"),
