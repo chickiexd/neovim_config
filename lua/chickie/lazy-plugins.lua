@@ -16,6 +16,10 @@ require('lazy').setup({
   'github/copilot.vim', -- GitHub Copilot do :help copilot, 1st time run :Copilot setup
   {'folke/zen-mode.nvim', opts = {} },
   {'numToStr/Comment.nvim', opts = {} },
+  {'RRethy/vim-illuminate', opts = {}, config = function ()
+    vim.g.Illuminate_delay = 1000
+    vim.g.Illuminate_ftblacklist = {'NvimTree', 'Trouble', 'dashboard', 'packer', 'startify', 'fugitive', 'fugitiveblame', 'undotree',}
+  end },
 
 
 
@@ -36,7 +40,7 @@ require('lazy').setup({
   require("chickie.plugins.no-neck-pain"),
   -- require("chickie.plugins.leetcode"),
   require("chickie.plugins.euler_vim"),
-  require("chickie.plugins.auto_sessions"),
+  -- require("chickie.plugins.auto_sessions"),
   require("chickie.plugins.harpoon"),
   require("chickie.plugins.neogit"),
   require("chickie.plugins.nvim-ufo"),
@@ -46,8 +50,10 @@ require('lazy').setup({
   require("chickie.plugins.nvim-tree"),
   -- require("chickie.plugins.vim-airline"),
   require("chickie.plugins.lualine"),
+  -- require("chickie.plugins.neovim-project"),
   -- COLOR SCHEMES
   require("chickie.plugins.colorscheme_catppuccin"),
+  require("chickie.plugins.alpha"),
 
   -- {'sainnhe/sonokai',
   --   priority = 1000,

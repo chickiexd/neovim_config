@@ -1,13 +1,11 @@
 --  [[ Basic Keymaps ]]
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
-vim.keymap.set("n", "<leader>Q", "<cmd>qa<CR>")
+vim.keymap.set("n", "<leader>Q", "<cmd>qa!<CR>")
 vim.keymap.set("n", "<leader>w", "<cmd>wa<CR>")
 vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("i", "<Esc>", "<Esc><cmd>w<CR>")
-vim.keymap.set("n", "<C-j>", "<C-d>")
-vim.keymap.set("n", "<C-k>", "<C-u>")
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv^")
@@ -122,8 +120,8 @@ vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:lis
 -- vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-d>", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<C-f>", function() harpoon:list():next() end)
+vim.keymap.set("n", "<C-f>", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<C-g>", function() harpoon:list():next() end)
 
 
 -- NEOGIT
