@@ -29,7 +29,7 @@ vim.keymap.set('n', '<C-w>l', ':tabnext<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-w>h', ':tabprevious<CR>', { noremap = true, silent = true })
 
 -- file explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -56,7 +56,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- Replace word under cursor across entire buffer
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>rd", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -84,7 +84,17 @@ vim.keymap.set("n", "<leader>gc", ":Neogit commit<CR>", { desc = "commit Neogit"
 vim.keymap.set("n", "<leader>gp", ":Neogit pull<CR>", { desc = "pull Neogit" })
 vim.keymap.set("n", "<leader>gP", ":Neogit push<CR>", { desc = "push Neogit" })
 vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { desc = "telescope git branches" })
-vim.keymap.set("n", "<leader>gB", ":G blame<CR>", { desc = "git blame" })
+
+-- NVIM TREE
+vim.keymap.set("n", "<leader>pv", "<CMD>NvimTreeToggle<CR>", { desc = "NVIM tree toggle" })
+
+--TROUBLE
+vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
+vim.keymap.set("n", "<leader>x.", function() require("trouble").toggle("quickfix") end)
+vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
+vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
 
 -- [[ Autocmds ]]
 -- Highlight when yanking (copying) text

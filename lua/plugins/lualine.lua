@@ -7,11 +7,11 @@ return {
       lualine.setup {
         options = {
           icons_enabled = true,
-          path = 1,
+          path = 0,
           mode = 2,
           theme = 'auto',
-          component_separators = { left = '', right = ''},
-          section_separators = { left = '', right = ''},
+          component_separators = { left = '', right = '' },
+          section_separators = { left = '', right = '' },
           disabled_filetypes = {
             statusline = {},
             winbar = {},
@@ -26,7 +26,7 @@ return {
           }
         },
         sections = {
-          lualine_a = {'tabs'},
+          lualine_a = { 'tabs' },
           lualine_b = {},
           lualine_c = {},
           lualine_x = {},
@@ -42,12 +42,14 @@ return {
           lualine_z = {}
         },
         tabline = {
-          lualine_a = {'mode'},
-          lualine_b = {'branch', 'diff', 'diagnostics'},
-          lualine_c = {'filename'},
-          lualine_x = {'fileformat', 'filetype'},
-          lualine_y = {'progress'},
-          lualine_z = {'location'}
+          lualine_a = { 'mode' },
+          lualine_b = { 'branch', 'diff', 'diagnostics' },
+          lualine_c = {
+            { 'filename', show_filename_only = true, path = 4 }
+          },
+          lualine_x = { 'fileformat', 'filetype' },
+          lualine_y = { 'progress' },
+          lualine_z = { 'location' }
         },
         winbar = {},
         inactive_winbar = {},

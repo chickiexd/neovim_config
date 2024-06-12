@@ -17,16 +17,16 @@ return {
     },
     config = function()
       -- See `:help telescope` and `:help telescope.setup()`
-      -- local trouble = require('trouble.sources.telescope')
+      local trouble = require('trouble.sources.telescope')
       require('telescope').setup {
         --
         defaults = {
           mappings = {
             i = {
-                -- ["<C-q>"] = trouble.open,
+                ["<C-q>"] = trouble.open,
             },
             n = {
-                -- ["<C-q>"] = trouble.open,
+                ["<C-q>"] = trouble.open,
             },
           },
         },
