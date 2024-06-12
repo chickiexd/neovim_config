@@ -66,6 +66,9 @@ vim.keymap.set("n", "<leader>sb", ":cd /home/chickie/data/second_brain<cr>")
 vim.keymap.set("n", "<leader>sbf", ":Telescope find_files search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
 vim.keymap.set("n", "<leader>sbg", ":Telescope live_grep search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
 
+--COMMENT
+vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise()<CR>", { desc = "Comment line" })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -75,6 +78,13 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- OIL
 vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- NEOGIT
+vim.keymap.set("n", "<leader>gs", ":Neogit<CR>", { desc = "Open Neogit" })
+vim.keymap.set("n", "<leader>gc", ":Neogit commit<CR>", { desc = "commit Neogit" })
+vim.keymap.set("n", "<leader>gp", ":Neogit pull<CR>", { desc = "pull Neogit" })
+vim.keymap.set("n", "<leader>gP", ":Neogit push<CR>", { desc = "push Neogit" })
+vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { desc = "telescope git branches" })
+vim.keymap.set("n", "<leader>gB", ":G blame<CR>", { desc = "git blame" })
 
 -- [[ Autocmds ]]
 -- Highlight when yanking (copying) text
