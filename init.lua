@@ -1,8 +1,31 @@
-vim.env.PATH = vim.env.PATH .. ":/usr/bin/node"
-vim.env.PATH = vim.env.PATH .. ":/usr/bin/python3"
-vim.g.python3_host_prog = "/usr/bin/python3"
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-require("chickie.globals")
-require("lazy-bootstrap")
-require("chickie")
+-- Bootstrap lazy
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+
+-- Add lazy to the `runtimepath`, this allows us to `require` it.
+---@diagnostic disable-next-line: undefined-field
+vim.opt.rtp:prepend(lazypath)
+
+-- This has to be set before initializing lazy
+vim.g.mapleader = " "
+
+-- Initialize lazy with dynamic loading of anything in the plugins directory
+require("lazy").setup("plugins", {
+   change_detection = {
+    enabled = true, -- automatically check for config file changes and reload the ui
+    notify = false, -- turn off notifications whenever plugin changes are made
+  },
+})
+
+-- These modules are not loaded by lazy
+require("chickie.options")
+require("chickie.keymaps")
