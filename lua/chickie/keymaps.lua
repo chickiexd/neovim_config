@@ -5,6 +5,8 @@ vim.keymap.set("n", "<leader>Q", "<cmd>qa!<CR>")
 vim.keymap.set("n", "<leader>w", "<cmd>wa<CR>")
 vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv^")

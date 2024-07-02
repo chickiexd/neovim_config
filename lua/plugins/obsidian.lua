@@ -21,7 +21,7 @@ return {
     workspaces = {
       {
         name = "Second Brain",
-        path = "/mnt/data/second_brain",
+        path = "$HOME/data/second_brain",
       },
       -- {
       --   name = "work",
