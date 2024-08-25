@@ -6,6 +6,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.showmode = true
 
+vim.opt.shell = 'zsh'
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -57,3 +59,6 @@ vim.opt.scrolloff = 10
 
 -- conceal level for obsidian
 vim.opt.conceallevel = 2
+
+-- turn of auto read for mounted filesystems
+vim.opt.autoread = false

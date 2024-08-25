@@ -63,17 +63,17 @@ vim.keymap.set("n", "<leader>rd", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- second brain stuff
-vim.keymap.set("n", "<leader>sb", ":cd /home/chickie/data/second_brain<cr>")
-vim.keymap.set("n", "<leader>sbf", ":Telescope find_files search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
-vim.keymap.set("n", "<leader>sbg", ":Telescope live_grep search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
-
 --COMMENT
 vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise()<CR>", { desc = "Comment line" })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- second brain stuff
+vim.keymap.set("n", "<leader>sb", ":cd /home/chickie/data/second_brain<cr>")
+vim.keymap.set("n", "<leader>sbf", ":Telescope find_files search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
+vim.keymap.set("n", "<leader>sbg", ":Telescope live_grep search_dirs={\"/home/chickie/data/second_brain\"}<cr>")
 
 -- [[ Plugin Keymaps ]]
 --

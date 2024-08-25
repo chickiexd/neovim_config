@@ -13,7 +13,7 @@ return
         settings = {
           search = {
             my_venvs = {
-              command = "fdfind python$ ~/.venvs",
+              command = "fdfind python$ ~/.my_venvs",
             },
           },
         },
