@@ -62,3 +62,7 @@ vim.opt.conceallevel = 2
 
 -- turn of auto read for mounted filesystems
 vim.opt.autoread = false
+
+
+
+

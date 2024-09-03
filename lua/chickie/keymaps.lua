@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>")
 vim.keymap.set("n", "<leader>Q", "<cmd>qa!<CR>")
-vim.keymap.set("n", "<leader>w", "<cmd>wa<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>wa!<CR>")
 vim.keymap.set("n", "<leader>W", "<cmd>wqa<CR>")
 vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("n", "j", "gj")
@@ -47,8 +47,10 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- copy and paste
 vim.keymap.set("v", "p", [["_dP]])
 vim.keymap.set("v", "<leader>p", "p")
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({ "n", "v" }, "y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", "y")
+vim.keymap.set("n", "Y", [["+Y]])
+vim.keymap.set("n", "<leader>Y", "Y")
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Nope
