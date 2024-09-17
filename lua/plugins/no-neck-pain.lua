@@ -15,6 +15,9 @@ return
             wo = {
                 fillchars = "eob: ",
             },
+            right = {
+                enabled = false,
+            },
             colors = {
                 -- background = "#2b2d2e",
                 -- blend = -1,
