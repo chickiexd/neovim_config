@@ -1,18 +1,21 @@
 return {
   {
-    'jose-elias-alvarez/null-ls.nvim',
+    'nvimtools/none-ls.nvim',
     config = function()
       local null_ls = require 'null-ls'
       local sources = {
         null_ls.builtins.formatting.black.with {
           filetypes = { 'python' },
-          },
+        },
         null_ls.builtins.formatting.prettier.with {
-          filetypes = { 'html', 'json', 'yaml', 'markdown' },
-          command = '/mnt/c/Users/chickie/AppData/Roaming/npm/prettier',
-          },
+          filetypes = { 'html', 'json', 'yaml', 'markdown','typescriptreact', 'typescript', 'javascript' },
+          command = '/usr/local/bin/prettier',
+        },
       }
-      null_ls.setup { sources = sources }
+      null_ls.setup {
+        sources = sources,
+        debug = true,
+      }
     end,
   },
 }
