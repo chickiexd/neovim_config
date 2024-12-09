@@ -50,6 +50,7 @@ return {
       vim.keymap.set('n', '<leader>st', builtin.git_files, { desc = '[S]earch Gi[T] Files' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
+      vim.keymap.set('n', '<leader>sr', builtin.oldfiles , { desc = '[S]earch [R]ecent open Files' })
 
       vim.keymap.set('n', '<leader>swh', function()
         local word = vim.fn.expand '<cword>'
