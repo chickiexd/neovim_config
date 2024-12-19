@@ -34,7 +34,7 @@ return {
     },
     config = function()
       -- See `:help cmp`
-      local cmp = require 'cmp'
+      local cmp = require 'lua.temp_diabled.cmp'
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
       cmp.setup.cmdline(':', {
