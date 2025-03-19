@@ -13,10 +13,10 @@ vim.keymap.set("v", "<", "<gv^")
 vim.keymap.set("v", ">", ">gv^")
 
 -- Resize
-vim.keymap.set('n', '<M-Left>',  ':vertical resize -5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Left>', ':vertical resize -5<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<M-Right>', ':vertical resize +5<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<M-Up>',    ':resize +5<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<M-Down>',  ':resize -5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Up>', ':resize +5<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<M-Down>', ':resize -5<CR>', { noremap = true, silent = true })
 
 -- TABS
 vim.keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "New tab" })
@@ -67,7 +67,7 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>rd", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- make current file executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+-- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 --COMMENT
 vim.keymap.set("n", "<leader>c", "<cmd>lua require('Comment.api').toggle.linewise()<CR>", { desc = "Comment line" })
@@ -96,16 +96,6 @@ vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { desc = "teles
 -- NVIM TREE
 vim.keymap.set("n", "<leader>pv", "<CMD>NvimTreeToggle<CR>", { desc = "NVIM tree toggle" })
 
---TROUBLE
-vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
-vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
-vim.keymap.set("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
-vim.keymap.set("n", "<leader>x.", function() require("trouble").toggle("quickfix") end)
-vim.keymap.set("n", "<leader>xl", function() require("trouble").toggle("loclist") end)
-vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references") end)
-vim.keymap.set("n", "]]", function() require("trouble").next({jump=true}) end)
-vim.keymap.set("n", "[[", function() require("trouble").prev({jump=true}) end)
-
 -- Debugging
 vim.keymap.set("n", "<leader>bb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", { desc = "Toggle breakpoint" })
 vim.keymap.set("n", '<leader>bq', "<cmd>lua require'dap'.clear_breakpoints()<cr>", { desc = "Clear breakpoints" })
@@ -114,15 +104,23 @@ vim.keymap.set("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", { desc
 vim.keymap.set("n", "<leader>dj", "<cmd>lua require'dap'.step_over()<cr>", { desc = "Step over" })
 vim.keymap.set("n", "<leader>dk", "<cmd>lua require'dap'.step_into()<cr>", { desc = "Step into" })
 vim.keymap.set("n", "<leader>do", "<cmd>lua require'dap'.step_out()<cr>", { desc = "Step out" })
-vim.keymap.set("n", '<leader>dd', function() require('dap').disconnect(); require('dapui').close(); end, { desc = "Disconnect" })
-vim.keymap.set("n", '<leader>dt', function() require('dap').terminate(); require('dapui').close(); end, { desc = "Terminate" })
+vim.keymap.set("n", '<leader>dd', function()
+  require('dap').disconnect(); require('dapui').close();
+end, { desc = "Disconnect" })
+vim.keymap.set("n", '<leader>dt', function()
+  require('dap').terminate(); require('dapui').close();
+end, { desc = "Terminate" })
 vim.keymap.set("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", { desc = "Toggle REPL" })
 vim.keymap.set("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", { desc = "Run last" })
 vim.keymap.set("n", '<leader>di', function() require "dap.ui.widgets".hover() end, { desc = "Hover" })
-vim.keymap.set("n", '<leader>d?', function() local widgets = require "dap.ui.widgets"; widgets.centered_float(widgets.scopes) end, { desc = "Scopes" })
+vim.keymap.set("n", '<leader>d?',
+  function()
+    local widgets = require "dap.ui.widgets"; widgets.centered_float(widgets.scopes)
+  end, { desc = "Scopes" })
 vim.keymap.set("n", '<leader>df', '<cmd>Telescope dap frames<cr>', { desc = "Frames" })
 vim.keymap.set("n", '<leader>dh', '<cmd>Telescope dap commands<cr>', { desc = "Commands" })
-vim.keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({default_text=":E:"}) end, { desc = "Diagnostics" })
+vim.keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({ default_text = ":E:" }) end,
+  { desc = "Diagnostics" })
 
 -- [[ Autocmds ]]
 -- Highlight when yanking (copying) text
