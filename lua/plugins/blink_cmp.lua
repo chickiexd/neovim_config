@@ -7,6 +7,7 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
+        cmdline = { completion = { menu = { auto_show = true }, ghost_text = { enabled = false } } },
         -- 'default' for mappings similar to built-in completion
         -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
         -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
@@ -14,7 +15,8 @@ return {
         -- your own keymap.
         keymap = {
             preset = 'default',
-            ['<C-space>'] = { 'accept', 'fallback' },
+            -- doesnt work for some reason
+            -- ['<C-space>'] = { 'select_and_accept' },
         },
 
         appearance = {
