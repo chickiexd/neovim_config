@@ -8,7 +8,7 @@ return {
           enable = true,
 
           -- Automatically jump forward to textobj, similar to targets.vim
-          lookahead = true,
+          lookahead = false,
 
           keymaps = {
             ["aa"] = { query = "@parameter.outer", desc = "Select outer part of a parameter/argument" },
@@ -71,4 +71,3 @@ return {
     vim.keymap.set({ "n", "x", "o" }, "T", ts_repeat_move.builtin_T)
   end,
 }
-

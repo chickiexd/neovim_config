@@ -4,7 +4,7 @@ return
     opts = {
         width = 130,
         autocmds = {
-            enableOnVimEnter = true,
+            enableOnVimEnter = false,
             -- configuration goes here
         },
         mappings = {

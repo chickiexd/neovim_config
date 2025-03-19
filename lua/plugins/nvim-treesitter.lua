@@ -10,7 +10,7 @@ return {
       ensure_installed = { 'bash', 'lua', 'markdown', 'vim', 'vimdoc', 'python', 'regex', 'markdown_inline' },
       -- Autoinstall languages that are not installed
       auto_install = true,
-      highlight = { enable = true },
+      highlight = { enable = true, disable = { "lua" }, additional_vim_regex_highlighting = false },
       indent = { enable = true },
     },
     config = function(_, opts)
