@@ -16,7 +16,7 @@ return {
         keymap = {
             preset = 'default',
             -- doesnt work for some reason
-            -- ['<C-space>'] = { 'select_and_accept' },
+            ['<C-space>'] = { 'select_and_accept' },
         },
 
         appearance = {

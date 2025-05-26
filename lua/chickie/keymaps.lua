@@ -8,6 +8,9 @@ vim.keymap.set("i", "jj", "<Esc><cmd>w<CR>")
 vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
+-- Error
+vim.keymap.set("n", "<leader>e", "<cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>", { desc = "Show line diagnostics" })
+
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv^")
 vim.keymap.set("v", ">", ">gv^")
