@@ -66,6 +66,8 @@ vim.opt.autoread = false
 -- add '-' to keywords
 vim.opt.iskeyword:append('-')
 
+-- clipboard to use system clipboard
+vim.g.clipboard = 'osc52'
 
 
 

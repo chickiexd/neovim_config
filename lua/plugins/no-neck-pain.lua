@@ -2,7 +2,7 @@ return
 {
     'shortcuts/no-neck-pain.nvim',
     opts = {
-        width = 130,
+        width = 100,
         autocmds = {
             enableOnVimEnter = false,
             -- configuration goes here

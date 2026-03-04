@@ -9,7 +9,7 @@ vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 
 -- Error
-vim.keymap.set("n", "<leader>e", "<cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>", { desc = "Show line diagnostics" })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
 -- Stay in indent mode
 vim.keymap.set("v", "<", "<gv^")
@@ -64,7 +64,15 @@ vim.keymap.set("v", "<leader>a", "g<C-a>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- format focument
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>f", function()
+    local ft = vim.bo.filetype
+    if ft == "go" then
+        vim.cmd("GoImports")
+        -- vim.lsp.buf.format({ async = false })
+    else
+        vim.lsp.buf.format({ async = true })
+    end
+end, { desc = "Format (and GoImports if Go)" })
 
 -- Replace word under cursor across entire buffer
 vim.keymap.set("n", "<leader>rd", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -136,3 +144,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+
+vim.keymap.set("n", '<leader>shg', '<cmd>GoDoc<cr>', { desc = "GoDoc" })
